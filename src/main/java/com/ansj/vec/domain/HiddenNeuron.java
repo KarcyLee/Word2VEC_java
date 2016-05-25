@@ -1,11 +1,13 @@
 package com.ansj.vec.domain;
 
-public class HiddenNeuron extends Neuron{
-    
+
+public class HiddenNeuron extends Neuron  {
+    private static final long serialVersionUID = -1609308565715242669L;
     public double[] syn1 ; //hidden->out
-    
+
     public HiddenNeuron(int layerSize){
-        syn1 = new double[layerSize] ;
+            syn1 = new double[layerSize];
+
     }
     
 }

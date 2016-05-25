@@ -1,7 +1,9 @@
 package com.ansj.vec.domain;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class WordEntry implements Comparable<WordEntry> {
+    private static Logger logger = LoggerFactory.getLogger(WordEntry.class);
     public String name;
     public float score;
 
@@ -18,7 +20,7 @@ public class WordEntry implements Comparable<WordEntry> {
 
     @Override
     public int compareTo(WordEntry o) {
-        // TODO Auto-generated method stub
+        // 实现小于号 ，倒序排序
         if (this.score < o.score) {
             return 1;
         } else {
