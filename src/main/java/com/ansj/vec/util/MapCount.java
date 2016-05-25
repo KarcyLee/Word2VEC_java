@@ -26,8 +26,9 @@ public class MapCount<T> {
 
     public void add(T t, int n) {
         try {
-            if(! this.hm.containsKey(t)){
-                this.hm.put(t, Integer.valueOf(n));
+            Integer integer = null;
+            if((integer = (Integer)this.hm.get(t)) != null) {
+                this.hm.put(t, Integer.valueOf(integer.intValue() + n));
             } else {
                 this.hm.put(t, Integer.valueOf(n));
             }
